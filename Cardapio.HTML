@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Completo - Restaurante Delícia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2E8B57;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: #2E8B57;
+            border-bottom: 2px solid #2E8B57;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0 1.5rem;
+        }
+        
+        .menu-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .item-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .item-price {
+            color: #2E8B57;
+            font-weight: bold;
+        }
+        
+        .item-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            width: 80%;
+        }
+        
+        .vegetarian {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-left: 0.5rem;
+            background-color: #f0fff0;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        
+        .spicy {
+            color: #FF4500;
+            font-weight: bold;
+            margin-left: 0.5rem;
+            background-color: #FFF0F0;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        
+        .chef-special {
+            background-color: #FFF8E1;
+            padding: 1rem;
+            border-left: 4px solid #FFA500;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-item {
+                flex-direction: column;
+            }
+            
+            .item-description {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Restaurante Delícia</h1>
+            <p>Cardápio Completo - Sabores para todos os gostos</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Destaques do Chef -->
+        <section class="menu-section chef-special">
+            <h2>🍳 Destaques do Chef</h2>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Tournedos Rossini</span>
+                    <p class="item-description">Filé mignon com foie gras, trufas negras e molho madeira, acompanhado de purê de batatas trufado</p>
+                </div>
+                <span class="item-price">R$ 129,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Risoto de Lagosta</span>
+                    <p class="item-description">Risoto cremoso com pedaços de lagosta e açafrão</p>
+                </div>
+                <span class="item-price">R$ 98,50</span>
+            </div>
+        </section>
+
+        <!-- Entradas -->
+        <section class="menu-section">
+            <h2>🍽️ Entradas</h2>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Bruschetta Tricolor</span>
+                    <span class="vegetarian">(Vegetariano)</span>
+                    <p class="item-description">Pão italiano com tomate, pesto de manjericão e queijo mussarela de búfala</p>
+                </div>
+                <span class="item-price">R$ 24,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Carpaccio de Salmão</span>
+                    <p class="item-description">Finas fatias de salmão cru com molho de endro e alcaparras</p>
+                </div>
+                <span class="item-price">R$ 36,50</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Ceviche Peruano</span>
+                    <span class="spicy">(Picante)</span>
+                    <p class="item-description">Peixe branco marinado no leite de tigre com cebola roxa e batata-doce</p>
+                </div>
+                <span class="item-price">R$ 42,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Tábua de Queijos</span>
+                    <span class="vegetarian">(Vegetariano)</span>
+                    <p class="item-description">Seleção de 5 queijos artesanais com geleia de figo e nozes</p>
+                </div>
+                <span class="item-price">R$ 58,00</span>
+            </div>
+        </section>
+        
+        <!-- Pratos Principais - Carnes -->
+        <section class="menu-section">
+            <h2>🍖 Carnes Especiais</h2>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Picanha na Manteiga de Ervas</span>
+                    <p class="item-description">400g de picanha com manteiga aromatizada, acompanha farofa e vinagrete</p>
+                </div>
+                <span class="item-price">R$ 89,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Costela Barbecue</span>
+                    <p class="item-description">Costela bovina desfiada ao molho barbecue caseiro, com fritas e coleslaw</p>
+                </div>
+                <span class="item-price">R$ 78,50</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Medalhão de Filé com Gorgonzola</span>
+                    <p class="item-description">300g de medalhão com molho de gorgonzola e peras caramelizadas</p>
+                </div>
+                <span class="item-price">R$ 92,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Cordeiro ao Molho de Hortelã</span>
+                    <p class="item-description">Pernil de cordeiro assado lentamente com molho fresco de hortelã</p>
+                </div>
+                <span class="item-price">R$ 102,00</span>
+            </div>
+        </section>
+        
+        <!-- Pratos Principais - Aves -->
+        <section class="menu-section">
+            <h2>🍗 Aves</h2>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Frango ao Molho de Coco e Curry</span>
+                    <p class="item-description">Sobrecoxa desossada com molho cremoso de coco e curry tailandês</p>
+                </div>
+                <span class="item-price">R$ 59,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Canelone de Frango com Catupiry</span>
+                    <p class="item-description">Massa fresca recheada com frango desfiado e catupiry</p>
+                </div>
+                <span class="item-price">R$ 48,50</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Pato à Laranja</span>
+                    <p class="item-description">Pato assado com molho de laranja amarga e purê de maçã</p>
+                </div>
+                <span class="item-price">R$ 112,00</span>
+            </div>
+        </section>
+        
+        <!-- Pratos Principais - Peixes e Frutos do Mar -->
+        <section class="menu-section">
+            <h2>🐟 Peixes & Frutos do Mar</h2>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Moqueca de Camarão</span>
+                    <p class="item-description">Camarões na tradicional moqueca baiana com arroz de coco e pirão</p>
+                </div>
+                <span class="item-price">R$ 98,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Salmão ao Molho de Maracujá</span>
+                    <p class="item-description">Filé de salmão grelhado com molho agridoce de maracujá</p>
+                </div>
+                <span class="item-price">R$ 89,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Lula Recheada</span>
+                    <p class="item-description">Lula gigante recheada com farofa de camarão e legumes</p>
+                </div>
+                <span class="item-price">R$ 78,50</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Bacalhau à Brás</span>
+                    <p class="item-description">Receita portuguesa com bacalhau desfiado, batata palha e ovos</p>
+                </div>
+                <span class="item-price">R$ 92,00</span>
+            </div>
+        </section>
+        
+        <!-- Pratos Vegetarianos -->
+        <section class="menu-section">
+            <h2>🌱 Opções Vegetarianas</h2>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Lasanha de Berinjela</span>
+                    <span class="vegetarian">(Vegetariano)</span>
+                    <p class="item-description">Camadas de berinjela, abobrinha e queijos com molho de tomate caseiro</p>
+                </div>
+                <span class="item-price">R$ 52,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Curry de Grão-de-Bico</span>
+                    <span class="vegetarian">(Vegetariano)</span>
+                    <span class="spicy">(Picante)</span>
+                    <p class="item-description">Grão-de-bico ao curry com leite de coco e legumes</p>
+                </div>
+                <span class="item-price">R$ 48,50</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Quiche de Espinafre</span>
+                    <span class="vegetarian">(Vegetariano)</span>
+                    <p class="item-description">Torta salgada com espinafre fresco e queijo brie</p>
+                </div>
+                <span class="item-price">R$ 42,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Bowl Vegano Power</span>
+                    <span class="vegetarian">(Vegano)</span>
+                    <p class="item-description">Quinoa, abóbora assada, cogumelos, kale e tahine</p>
+                </div>
+                <span class="item-price">R$ 46,00</span>
+            </div>
+        </section>
+        
+        <!-- Massas -->
+        <section class="menu-section">
+            <h2>🍝 Massas Artesanais</h2>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Tagliatelle ao Ragu de Picanha</span>
+                    <p class="item-description">Massa fresca com molho de picanha desfiada e tomates confit</p>
+                </div>
+                <span class="item-price">R$ 68,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Ravioli de Queijo com Nozes</span>
+                    <span class="vegetarian">(Vegetariano)</span>
+                    <p class="item-description">Ravioli recheado com queijos e molho de manteiga com nozes</p>
+                </div>
+                <span class="item-price">R$ 58,50</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Gnocchi ao Pesto</span>
+                    <span class="vegetarian">(Vegetariano)</span>
+                    <p class="item-description">Nhoque de batata com pesto de manjericão fresco e pinoli</p>
+                </div>
+                <span class="item-price">R$ 52,00</span>
+            </div>
+        </section>
+        
+        <!-- Sobremesas -->
+        <section class="menu-section">
+            <h2>🍰 Sobremesas</h2>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Petit Gateau Triplo Chocolate</span>
+                    <p class="item-description">Bolo de chocolate com recheio cremoso e sorvete de baunilha</p>
+                </div>
+                <span class="item-price">R$ 24,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Cheesecake de Doce de Leite</span>
+                    <p class="item-description">Com calda de frutas vermelhas e crocante de amêndoas</p>
+                </div>
+                <span class="item-price">R$ 22,50</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Pudim de Chia com Frutas</span>
+                    <span class="vegetarian">(Vegano)</span>
+                    <p class="item-description">Pudim de chia com leite de coco e mix de frutas frescas</p>
+                </div>
+                <span class="item-price">R$ 18,90</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Torta de Limão Siciliano</span>
+                    <p class="item-description">Massa crocante com creme de limão e merengue</p>
+                </div>
+                <span class="item-price">R$ 21,00</span>
+            </div>
+        </section>
+        
+        <!-- Bebidas -->
+        <section class="menu-section">
+            <h2>🍹 Bebidas</h2>
+            
+            <h3>Sem Álcool</h3>
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Sucos Naturais (500ml)</span>
+                    <p class="item-description">Laranja, Abacaxi com Hortelã, Maracujá, Limão, Manga</p>
+                </div>
+                <span class="item-price">R$ 14,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Água Mineral</span>
+                    <p class="item-description">Com ou sem gás (500ml)</p>
+                </div>
+                <span class="item-price">R$ 6,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Refrigerantes (350ml)</span>
+                    <p class="item-description">Coca-Cola, Guaraná, Fanta, Sprite, Schweppes</p>
+                </div>
+                <span class="item-price">R$ 8,00</span>
+            </div>
+            
+            <h3 style="margin-top: 2rem;">Bebidas Alcoólicas</h3>
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Cervejas Artesanais (600ml)</span>
+                    <p class="item-description">IPA, Pilsen, Weiss, Stout (consulte opções do dia)</p>
+                </div>
+                <span class="item-price">R$ 22,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Taça de Vinho</span>
+                    <p class="item-description">Tintos, brancos e espumantes (consulte opções)</p>
+                </div>
+                <span class="item-price">R$ 28,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div>
+                    <span class="item-name">Drinks Especiais</span>
+                    <p class="item-description">Caipirinha premium, Mojito, Negroni, Aperol Spritz</p>
+                </div>
+                <span class="item-price">R$ 32,00</span>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Restaurante Delícia - Rua das Flores, 123 - Centro</p>
+            <p>Telefone: (11) 1234-5678 | WhatsApp: (11) 98765-4321</p>
+            <p>Horário de funcionamento: Terça a Domingo, das 11h às 23h</p>
+            <p>Aceitamos todos os cartões | Delivery disponível</p>
+        </div>
+    </footer>
+</body>
+</html>
